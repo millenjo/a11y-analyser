@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "start": "deno run --allow-net --allow-read --allow-env --allow-sys --allow-write --allow-run --watch main.ts"
+  },
+  "dependencies": {
+    "@axe-core/puppeteer": "^4.10.1",
+    "puppeteer": "^23.11.1"
+  }
+}
