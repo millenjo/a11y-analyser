@@ -88,7 +88,6 @@ if (import.meta.main) {
 
   Deno.serve({ port: 8000 }, async (req: Request) => {
     const requestBody = await req.json()
-    console.log('Start')
 
     const body = new ReadableStream({
       start(controller) {
@@ -105,7 +104,7 @@ if (import.meta.main) {
 
     return new Response(body, {
       headers: {
-        'content-type': 'text/plain',
+        'content-type': 'text/event-stream',
         'x-content-type-options': 'nosniff',
       },
     })
